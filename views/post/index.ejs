@@ -1,4 +1,4 @@
-<%- include('./includes/header'); %>
+<%- include('../includes/header'); %>
 <div class="row">
     <div class="col-8 offset-2">
         <h1 class="mt-5"><%= title; %></h1>
@@ -6,13 +6,14 @@
             <% posts.forEach((post) => { %>
                 <div class="card mb-2">
                     <div class="card-body">
-                        <h5 class="card-title"><a href="./post/<%= post.id %>"><%= post.name; %></a></h5>
+                        <h5 class="card-title"><a href="./posts/<%= post.id %>"><%= post.name; %></a></h5>
+                        <p class="card-text"><small><i class="mr-2">Created at:</i></small><small class="text-muted"><%= dateFormat(post.created_at, 'yyyy-mm-dd HH:MM'); %></small></p>
                         <p class="card-text"><%= post.description; %></p>
-                        <p class="card-text"><small class="text-muted"><%= dateFormat(post.created_at, 'yyyy-mm-dd HH:MM'); %></small></p>
+
                     </div>
                 </div>
             <% }); %>
         <% } %>
     </div>
 </div>
-<%- include('./includes/footer'); %>
+<%- include('../includes/footer'); %>

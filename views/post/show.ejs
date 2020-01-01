@@ -1,0 +1,16 @@
+<%- include('../includes/header'); %>
+<div class="row">
+    <div class="col-8 offset-2">
+        <h1 class="mt-5"><%= title; %></h1>
+        <hr>
+        <% if(post) { %>
+            <div>
+                <p class="card-text">
+                    <small><i class="mr-2">Created at:</i></small>
+                    <small class="text-muted"><%= dateFormat(post.created_at, 'yyyy-mm-dd HH:MM'); %></small></p>
+                <p class="card-text"><%= post.description; %></p>
+            </div>
+        <% } %>
+    </div>
+</div>
+<%- include('../includes/footer'); %>
