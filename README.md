@@ -24,6 +24,8 @@ or for developing
 
 import database file from database folder.
 
+you can set your mysql config in <strong>libraries/database.js</strong> file.
+
 
 ### Run
 
